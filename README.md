@@ -1,36 +1,13 @@
-Google Assistant API Sample for Android Things
-==============================================
+Google Home for Android Things
+==============================
 
 This sample shows how to call the Google Assistant API from Android Things.
-
-It records a spoken request from the connected microphones, sends it to the Google Assistant API and plays back the Assistant's spoken response on the connected speaker.
 
 Pre-requisites
 --------------
 
 - Android Studio 2.2+.
 - Android Things compatible board.
-- If using [AIY Projects Voice Kit][voice-kit]:
-    - Android Things Raspberry Pi Dev Preview [3.1 image][dev-preview-download] with I2S enabled.
-        - mount the sdcard image
-
-              # replace sdb1 with the sdcard reader device.
-              mount -t msdos /dev/sdb1 /mnt/disk
-
-        - edit `config.txt`
-
-              # comment or remove this line:
-              # dtoverlay=pwm-2chan-with-clk,pin=18,func=2,pin2=13,func2=4
-              #
-              # uncomment or add this line:
-              dtoverlay=generic-i2s
-
-        - umount the sdcard image
-
-              sync
-              umount /mnt/disk
-- If using Android Things: supported [microphone][mic] and [speaker][speaker].
-    - set `AUDIO_USE_I2S_VOICEHAT_IF_AVAILABLE = false` in `AssistantActivity.java`
 - [Google API Console Project][console].
 
 Run the sample
